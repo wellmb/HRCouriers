@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="HRCouriers — вакансии курьеров: Яндекс Еда, Купер, Магнит, Додо, Самокат, Вкусно — и точка, Х5." />
+  <title>HRCouriers — Вакансии для курьеров</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="logo" href="#" aria-label="HRCouriers — на главную">
+        <span class="logo__mark">HR</span>
+        <span class="logo__text">Couriers</span>
+      </a>
+      <nav class="nav" aria-label="Основная навигация">
+        <a class="nav__link" href="#workflow-stages">Этапы работы</a>
+        <a class="nav__link" href="#how-it-works">Как это работает</a>
+        <a class="nav__link" href="#vacancies">Вакансии</a>
+        <a class="nav__link" href="#alfa-map">Карта Альфа-Банка</a>
+        <a class="nav__link nav__link--support" href="#" data-tg-start="help" target="_blank" rel="noopener noreferrer">Помощь</a>
+        <a class="nav__link nav__link--cta" href="#vacancies">Подбор</a>
+      </nav>
+      <button type="button" class="nav-toggle" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <p class="hero__badge">Кадровый сервис для курьеров</p>
+          <h1 class="hero__title">Стабильный доход и понятные условия</h1>
+          <p class="hero__lead">
+            Оформление на проверенные площадки в пару кликов: переходите по партнёрской ссылке и начинайте принимать заказы.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#vacancies">Выбрать вакансию</a>
+            <a class="btn btn--ghost" href="#vacancies">Смотреть вакансии</a>
+          </div>
+          <ul class="hero__stats" aria-label="Преимущества сервиса">
+            <li><strong>24/7</strong><span>поддержка в Telegram</span></li>
+            <li><strong>8+</strong><span>площадок-партнёров</span></li>
+            <li><strong>HR</strong><span>персональный контакт</span></li>
+          </ul>
+        </div>
+        <div class="hero__panel reveal" aria-hidden="true">
+          <div class="hero__card"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Доверие">
+      <div class="container trust-strip__inner reveal">
+        <p class="trust-strip__text">Официальный партнёр крупнейших сетей доставки в РФ</p>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="section how">
+      <div class="container">
+        <header class="section__head section__head--center reveal">
+          <h2 class="section__title">Как это работает</h2>
+          <p class="section__subtitle">Три шага до первых выплат — без лишней бюрократии на нашей стороне.</p>
+        </header>
+        <ol class="how__steps">
+          <li class="how__step reveal">
+            <div class="how__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 8h16v4H12V8zm0 8h10v4H12v-4zm0 8h16v4H12v-4z" fill="currentColor" opacity=".35"/><path d="M8 6v28h24V6H8zm2 2h20v24H10V8z" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3 class="how__step-title">Выбираешь вакансию</h3>
+            <p class="how__step-text">Смотри сетку партнёров и условия — всё кратко на карточке.</p>
+          </li>
+          <li class="how__step reveal">
+            <div class="how__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 12h10v10H18z" stroke="currentColor" stroke-width="2"/><path d="m14 20 10 10 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M10 28h20v4H10v-4z" fill="currentColor" opacity=".35"/></svg>
+            </div>
+            <h3 class="how__step-title">Переходишь по ссылке</h3>
+            <p class="how__step-text">Попадаешь на официальную регистрацию выбранной площадки.</p>
+          </li>
+          <li class="how__step reveal">
+            <div class="how__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 8l3 7 8 1-6 5 2 8-7-4-7 4 2-8-6-5 8-1 3-7z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="20" cy="22" r="3" fill="currentColor" opacity=".4"/></svg>
+            </div>
+            <h3 class="how__step-title">Выходишь на смену и получаешь бонус</h3>
+            <p class="how__step-text">Начинаешь доставлять заказы — бонусы и акции зависят от партнёра.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="vacancies" class="section vacancies">
+      <div class="container">
+        <header class="section__head reveal">
+          <h2 class="section__title">Вакансии</h2>
+          <p class="section__subtitle">
+            Еженедельные выплаты и работа рядом с домом — у большинства партнёров. Выберите бренд и перейдите на официальную регистрацию.
+          </p>
+        </header>
+        <div class="cards cards--wide">
+          <article class="card card--yandex reveal">
+            <div class="card__logo-wrap">
+              <img class="card__logo-img" src="assets/logos/yandex-eda.svg" width="200" height="72" alt="Яндекс Еда" loading="lazy" />
+            </div>
+            <h3 class="card__title">Яндекс Еда</h3>
+            <p class="card__perks">Еженедельные выплаты · Работа рядом с домом</p>
+            <p class="card__text">Доставка из ресторанов и магазинов. Гибкий график и понятная мотивация.</p>
+            <a class="btn btn--card" href="#" data-tg-start="yandex" target="_blank" rel="noopener noreferrer">Узнать больше</a>
+          </article>
+          <article class="card card--kuper reveal">
+            <div class="card__logo-wrap">
+              <img class="card__logo-img" src="assets/logos/kuper.svg" width="200" height="72" alt="Купер" loading="lazy" />
+            </div>
+            <h3 class="card__title">Купер</h3>
+            <p class="card__perks">Еженедельные выплаты · Работа рядом с домом</p>
+            <p class="card__text">Доставка продуктов и заказов из магазинов — стабильный поток в вашем районе.</p>
+            <a class="btn btn--card" href="#" data-tg-start="kuper" target="_blank" rel="noopener noreferrer">Узнать больше</a>
+          </article>
+          <article class="card card--magnit reveal">
+            <div class="card__logo-wrap">
+              <img class="card__logo-img" src="assets/logos/magnit.svg" width="200" height="72" alt="Магнит" loading="lazy" />
+            </div>
+            <h3 class="card__title">Магнит Маркет</h3>
+            <p class="card__perks">Еженедельные выплаты · Работа рядом с домом</p>
+            <p class="card__text">Доставка заказов сети Магнит — знакомый формат и прозрачные условия.</p>
+            <a class="btn btn--card" href="#" data-tg-start="magnit" target="_blank" rel="noopener noreferrer">Узнать больше</a>
+          </article>
+          <article class="card card--dodo reveal">
+            <div class="card__logo-wrap">
+              <img class="card__logo-img" src="assets/logos/dodo.svg" width="200" height="72" alt="Додо Пицца" loading="lazy" />
+            </div>
+            <h3 class="card__title">Додо Пицца</h3>
+            <p class="card__perks">Еженедельные выплаты · Работа рядом с домом</p>
+            <p class="card__text">Доставка из пиццерий Додо — предсказуемые маршруты и понятные правила.</p>
+            <a class="btn btn--card" href="#" data-tg-start="dodo" target="_blank" rel="noopener noreferrer">Узнать больше</a>
+          </article>
+          <article class="card card--samokat reveal">
+            <div class="card__logo-wrap">
+              <img class="card__logo-img" src="assets/logos/samokat.svg" width="200" height="72" alt="Самокат" loading="lazy" />
+            </div>
+            <h3 class="card__title">Самокат</h3>
+            <p class="card__perks">Еженедельные выплаты · Работа рядом с домом</p>
+            <p class="card__text">Быстрая доставка из тёмных складов — короткие дистанции и высокая оборачиваемость.</p>
+            <a class="btn btn--card" href="#" data-tg-start="samokat" target="_blank" rel="noopener noreferrer">Узнать больше</a>
+          </article>
+          <article class="card card--vkusno reveal">
+            <div class="card__logo-wrap">
+              <img class="card__logo-img" src="assets/logos/vkusno.svg" width="220" height="72" alt="Вкусно — и точка" loading="lazy" />
+            </div>
+            <h3 class="card__title">Вкусно — и точка</h3>
+            <p class="card__perks">Еженедельные выплаты · Работа рядом с домом</p>
+            <p class="card__text">Доставка из ресторанов сети — высокая узнаваемость бренда и поток заказов.</p>
+            <a class="btn btn--card" href="#" data-tg-start="vkusno" target="_blank" rel="noopener noreferrer">Узнать больше</a>
+          </article>
+          <article class="card card--x5 reveal">
+            <div class="card__logo-wrap card__logo-wrap--x5">
+              <img class="card__logo-img card__logo-img--duo" src="assets/logos/pyaterochka.svg" width="140" height="64" alt="Пятёрочка" loading="lazy" />
+              <span class="card__logo-divider" aria-hidden="true">·</span>
+              <img class="card__logo-img card__logo-img--duo" src="assets/logos/perekrestok.svg" width="140" height="64" alt="Перекрёсток" loading="lazy" />
+            </div>
+            <h3 class="card__title">Пятёрочка и Перекрёсток</h3>
+            <p class="card__perks">Еженедельные выплаты · Работа рядом с домом</p>
+            <p class="card__text">Доставка продуктов сети Х5 — заказы из магазина у дома и по городу.</p>
+            <a class="btn btn--card" href="#" data-tg-start="x5" target="_blank" rel="noopener noreferrer">Узнать больше</a>
+          </article>
+          <article class="card card--ozon-fresh reveal">
+            <div class="card__logo-wrap">
+              <img class="card__logo-img" src="assets/logos/ozon-fresh.svg" width="200" height="72" alt="Ozon Фреш" loading="lazy" />
+            </div>
+            <h3 class="card__title">Ozon Фреш</h3>
+            <p class="card__perks">Еженедельные выплаты · Работа рядом с домом</p>
+            <p class="card__text">Гибкий график на складах и доставке, стабильные выплаты.</p>
+            <a class="btn btn--card" href="#" data-tg-start="ozon_fresh" target="_blank" rel="noopener noreferrer">Узнать больше</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="alfa-map" class="section alfa">
+      <div class="container">
+        <div class="alfa__featured reveal">
+          <span class="alfa__badge">Альфа-Банк</span>
+          <div class="alfa__grid alfa__grid--inner">
+            <div class="alfa__copy">
+              <h2 class="section__title alfa__title">Карта Альфа-Банка</h2>
+              <p class="alfa__highlight">
+                Карта для самозанятых курьеров: 0₽ за обслуживание, кэшбек на бензин и обеды.
+              </p>
+              <p class="section__subtitle alfa__text">
+                Удобная дебетовая карта для выплат и ежедневных трат. На карте ниже — отделения рядом с вами (центр — Москва; при необходимости замените регион в коде).
+              </p>
+              <a class="btn btn--alfa-cta" href="#" id="alfa-ref-link" data-tg-start="alfa" target="_blank" rel="noopener noreferrer">Узнать больше</a>
+            </div>
+            <div class="alfa__map-wrap">
+              <iframe
+                class="alfa__map"
+                src="https://yandex.ru/map-widget/v1/?ll=37.617644%2C55.755824&z=11"
+                title="Карта: регион по умолчанию"
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="workflow-stages" class="section workflow">
+      <div class="container">
+        <header class="section__head section__head--center reveal">
+          <h2 class="section__title">Этапы работы</h2>
+          <p class="section__subtitle">Прозрачный путь от выбора вакансии до первой смены.</p>
+        </header>
+        <ol class="workflow__steps">
+          <li class="workflow__step reveal">
+            <span class="workflow__num" aria-hidden="true">1</span>
+            <div class="workflow__body">
+              <h3 class="workflow__title">Выберите вакансию</h3>
+              <p class="workflow__text">Нажмите «Узнать больше» у нужного бренда.</p>
+            </div>
+          </li>
+          <li class="workflow__arrow reveal" aria-hidden="true">→</li>
+          <li class="workflow__step reveal">
+            <span class="workflow__num" aria-hidden="true">2</span>
+            <div class="workflow__body">
+              <h3 class="workflow__title">Заполните анкету в боте</h3>
+              <p class="workflow__text">Ответьте на вопросы в Telegram — это займёт несколько минут.</p>
+            </div>
+          </li>
+          <li class="workflow__arrow reveal" aria-hidden="true">→</li>
+          <li class="workflow__step reveal">
+            <span class="workflow__num" aria-hidden="true">3</span>
+            <div class="workflow__body">
+              <h3 class="workflow__title">Выйдите на первую смену</h3>
+              <p class="workflow__text">Получите инструкции и начинайте принимать заказы.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer footer--mega">
+    <div class="container footer__mega-inner reveal">
+      <div class="footer__brand">
+        <span class="logo logo--footer"><span class="logo__mark">HR</span><span class="logo__text">Couriers</span></span>
+        <p class="footer__lead">
+          Подбор вакансий курьера на проверенные площадки. Информация носит справочный характер — условия уточняйте у партнёра при регистрации.
+        </p>
+        <a class="btn btn--footer-cta" href="#" id="footer-support" data-tg-start="support" target="_blank" rel="noopener noreferrer">Написать в поддержку</a>
+      </div>
+      <div class="footer__cols">
+        <div class="footer__col">
+          <h3 class="footer__heading">Навигация</h3>
+          <ul class="footer__list">
+            <li><a href="#hero">Главная</a></li>
+            <li><a href="#workflow-stages">Этапы работы</a></li>
+            <li><a href="#how-it-works">Как это работает</a></li>
+            <li><a href="#vacancies">Вакансии</a></li>
+            <li><a href="#alfa-map">Карта Альфа-Банка</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__heading">Правовая информация</h3>
+          <ul class="footer__list">
+            <li><a href="privacy.html">Политика конфиденциальности</a></li>
+            <li><a href="terms.html">Пользовательское соглашение</a></li>
+            <li><a href="privacy.html#cookies">Файлы cookie</a></li>
+          </ul>
+        </div>
+        <div class="footer__col footer__col--telegram">
+          <h3 class="footer__heading">Telegram</h3>
+          <p class="footer__telegram-lead">Поддержка и ответы по вакансиям — в одном чате.</p>
+          <a class="footer__telegram-cta" id="footer-social-tg" href="#" data-tg-start="telegram" target="_blank" rel="noopener noreferrer">
+            <svg class="footer__telegram-icon" width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M21.527 2.474 2.483 11.399c-1.036.458-.993 2.012.063 2.422l5.293 2.023 2.059 6.243c.287.872 1.359 1.145 2.06.658l3.535-2.517 6.684 4.891c.848.622 2.06.055 2.272-.887l3.657-17.228c.246-1.165-.972-2.043-2.099-1.53ZM17.07 6.693l-9.02 8.246c-.353.322-.652.746-.845 1.197l-.698 1.867c-.074.198-.368.116-.341-.103l.848-6.077c.046-.333.172-.647.366-.914l8.69-11.216c.093-.12.282-.009.222.125l.78 5.875Z"/>
+            </svg>
+            Открыть Telegram
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bar">
+      <p class="footer__copyright">© HRCouriers. Все права защищены.</p>
+      <p class="footer__note">Материалы сайта не являются публичной офертой.</p>
+    </div>
+  </footer>
+
+  <script>
+    /** Имя бота без @ — параметры ?start= задаются через data-tg-start у кнопок */
+    window.HRCOURIERS_BOT_USERNAME = "HRCouriersbot";
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

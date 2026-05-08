@@ -1,28 +1,9 @@
 /**
- * HRCouriers — deeplink в Telegram (?start=), reveal при скролле, меню.
+ * HRCouriers — reveal при скролле и мобильное меню.
  */
 
 (function () {
   "use strict";
-
-  function getBotUsername() {
-    var raw = window.HRCOURIERS_BOT_USERNAME || "HRCouriersbot";
-    return String(raw).replace(/^@/, "").trim();
-  }
-
-  function telegramDeepLink(startPayload) {
-    var user = getBotUsername();
-    var payload = String(startPayload || "site").trim();
-    return "https://t.me/" + encodeURIComponent(user) + "?start=" + encodeURIComponent(payload);
-  }
-
-  function bindTelegramDeepLinks() {
-    document.querySelectorAll("[data-tg-start]").forEach(function (el) {
-      var start = el.getAttribute("data-tg-start");
-      if (!start) return;
-      el.href = telegramDeepLink(start);
-    });
-  }
 
   function initScrollReveal() {
     var nodes = document.querySelectorAll(".reveal");
@@ -51,7 +32,6 @@
     });
   }
 
-  bindTelegramDeepLinks();
   initScrollReveal();
 
   var toggle = document.querySelector(".nav-toggle");

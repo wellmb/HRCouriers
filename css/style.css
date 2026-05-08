@@ -901,46 +901,6 @@ a.btn--card {
   color: #fff;
 }
 
-.footer__col--telegram {
-  min-width: min(100%, 260px);
-}
-
-.footer__telegram-lead {
-  margin: 0 0 1rem;
-  font-size: 0.92rem;
-  line-height: 1.5;
-  color: rgba(255, 255, 255, 0.68);
-}
-
-.footer__telegram-cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.65rem;
-  padding: 0.95rem 1.45rem;
-  border-radius: 14px;
-  background: #229ed9;
-  color: #fff;
-  font-weight: 800;
-  font-size: 1.06rem;
-  letter-spacing: 0.02em;
-  box-shadow: 0 14px 34px rgba(34, 158, 217, 0.42);
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    filter 0.25s ease;
-}
-
-.footer__telegram-cta:hover {
-  transform: translateY(-3px);
-  filter: brightness(1.08);
-  box-shadow: 0 20px 48px rgba(34, 158, 217, 0.52);
-  color: #fff;
-}
-
-.footer__telegram-icon {
-  flex-shrink: 0;
-}
-
 .footer__bar {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 1.35rem 0 2rem;

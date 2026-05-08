@@ -461,11 +461,11 @@ a.btn--card {
 .card {
   display: flex;
   flex-direction: column;
-  padding: 1.5rem;
+  padding: 0 1.5rem 1.5rem;
   background: var(--surface);
   border-radius: var(--radius-lg);
-  border: 2px solid var(--border);
-  box-shadow: var(--shadow);
+  border: 1px solid var(--border);
+  overflow: hidden;
   min-height: 100%;
 }
 
@@ -477,158 +477,53 @@ a.btn--card {
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 16px 40px rgba(17, 24, 39, 0.12);
+  transform: translateY(-3px);
 }
 
 .card.reveal--visible:hover {
   transform: translateY(-5px);
 }
 
-/* Фирменные карточки вакансий */
-.card--yandex {
-  background: #fffbeb;
-  border-color: #ffe066;
-}
-
-.card--yandex .card__perks {
-  color: #a16207;
-}
-
-.card--yandex .btn--card {
-  background: #ffd400;
-  color: #1a1d26;
-}
-
-.card--yandex .btn--card:hover {
-  background: #e6bf00;
-}
-
-.card--kuper {
-  background: #ecfdf3;
-  border-color: #86efac;
-}
-
-.card--kuper .card__perks {
-  color: #15803d;
-}
-
-.card--kuper .btn--card {
-  background: #24c653;
+.card__brand-header {
+  margin: 0 -1.5rem 1rem;
+  padding: 1.4rem 1rem;
+  min-height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   color: #fff;
+  font-size: 1.28rem;
+  font-weight: 800;
+  line-height: 1.15;
 }
 
-.card--kuper .btn--card:hover {
-  background: #1da846;
-}
+.card--yandex .card__brand-header { background: #ffc400; }
+.card--kuper .card__brand-header { background: #24c767; }
+.card--magnit .card__brand-header { background: #e20613; }
+.card--dodo .card__brand-header { background: #ff6900; }
+.card--samokat .card__brand-header { background: #ee355a; }
+.card--vkusno .card__brand-header { background: #004a32; }
+.card--pyaterochka .card__brand-header { background: #ed1c24; }
+.card--ozon .card__brand-header { background: #005bff; }
 
-.card--magnit {
-  background: #fff1f1;
-  border-color: #fca5a5;
-}
+.card--yandex .btn--card { background: #ffc400; color: #1a1d26; }
+.card--kuper .btn--card { background: #24c767; color: #fff; }
+.card--magnit .btn--card { background: #e20613; color: #fff; }
+.card--dodo .btn--card { background: #ff6900; color: #fff; }
+.card--samokat .btn--card { background: #ee355a; color: #fff; }
+.card--vkusno .btn--card { background: #004a32; color: #fff; }
+.card--pyaterochka .btn--card { background: #ed1c24; color: #fff; }
+.card--ozon .btn--card { background: #005bff; color: #fff; }
 
-.card--magnit .card__perks {
-  color: #b91c1c;
-}
-
-.card--magnit .btn--card {
-  background: #e60000;
-  color: #fff;
-}
-
-.card--magnit .btn--card:hover {
-  background: #c40000;
-}
-
-.card--dodo {
-  background: #fff4ed;
-  border-color: #fdba74;
-}
-
-.card--dodo .card__perks {
-  color: #c2410c;
-}
-
-.card--dodo .btn--card {
-  background: #ff6600;
-  color: #fff;
-}
-
-.card--dodo .btn--card:hover {
-  background: #e65c00;
-}
-
-.card--samokat {
-  background: #fdf2f8;
-  border-color: #f9a8d4;
-}
-
-.card--samokat .card__perks {
-  color: #be185d;
-}
-
-.card--samokat .btn--card {
-  background: #ee3884;
-  color: #fff;
-}
-
-.card--samokat .btn--card:hover {
-  background: #d92f73;
-}
-
-.card--vkusno {
-  background: #e8f5f0;
-  border-color: #6ee7b7;
-}
-
-.card--vkusno .card__perks {
-  color: #065f46;
-}
-
-.card--vkusno .btn--card {
-  background: #00462d;
-  color: #fff;
-}
-
-.card--vkusno .btn--card:hover {
-  background: #003822;
-}
-
-.card--x5 {
-  background: #ecfdf5;
-  border-color: #86efac;
-}
-
-.card--x5 .card__perks {
-  color: #15803d;
-}
-
-.card--x5 .btn--card {
-  background: #ed1c24;
-  color: #fff;
-}
-
-.card--x5 .btn--card:hover {
-  background: #d41920;
-}
-
-.card--ozon-fresh {
-  background: linear-gradient(145deg, #eef4ff 0%, #fae8ff 100%);
-  border-color: #93c5fd;
-}
-
-.card--ozon-fresh .card__perks {
-  color: #4338ca;
-}
-
-.card--ozon-fresh .btn--card {
-  background: linear-gradient(135deg, #005bff 0%, #c026d3 100%);
-  color: #fff;
-}
-
-.card--ozon-fresh .btn--card:hover {
-  filter: brightness(1.06);
-}
+.card--yandex .card__perks { color: #a16207; }
+.card--kuper .card__perks { color: #15803d; }
+.card--magnit .card__perks { color: #b91c1c; }
+.card--dodo .card__perks { color: #c2410c; }
+.card--samokat .card__perks { color: #be185d; }
+.card--vkusno .card__perks { color: #065f46; }
+.card--pyaterochka .card__perks { color: #b91c1c; }
+.card--ozon .card__perks { color: #1d4ed8; }
 
 .card__icon {
   width: 48px;
@@ -653,40 +548,6 @@ a.btn--card {
 .card__title {
   margin: 0 0 0.5rem;
   font-size: 1.15rem;
-}
-
-.card__logo-wrap {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 72px;
-  margin-bottom: 1rem;
-}
-
-.card__logo-wrap--x5 {
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.card__logo-divider {
-  font-weight: 800;
-  color: var(--muted);
-  opacity: 0.45;
-  user-select: none;
-}
-
-.card__logo-img {
-  width: auto;
-  max-width: 100%;
-  height: auto;
-  max-height: 72px;
-  min-height: 48px;
-  object-fit: contain;
-}
-
-.card__logo-img--duo {
-  max-height: 64px;
-  max-width: min(160px, 48%);
 }
 
 .card__perks {

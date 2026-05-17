@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 56" role="img" aria-label="Магнит">
+  <rect width="160" height="56" rx="12" fill="#E60000"/>
+  <rect x="14" y="14" width="132" height="28" rx="6" fill="#fff" opacity=".14"/>
+  <text x="80" y="36" text-anchor="middle" font-family="system-ui,Segoe UI,sans-serif" font-weight="900" font-size="19" fill="#fff" letter-spacing=".04em">МАГНИТ</text>
+</svg>

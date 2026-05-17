@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <script>
+    (function () {
+      var go = new URLSearchParams(window.location.search).get("go");
+      if (!go) return;
+
+      // Replace values with your actual Workle/affiliate long URLs.
+      var redirectMap = Object.freeze({
+        yandex: "https://eda.yandex.ru/",
+        yandex_ru: "https://eda.yandex.ru/",
+        yandex_kz: "https://eda.yandex.kz/",
+        yandex_by: "https://eda.yandex.by/",
+        yandex_uz: "https://eda.yandex.uz/",
+        kuper: "https://kuper.ru/",
+        samokat: "https://samokat.ru/",
+        ozon: "https://www.ozon.ru/"
+      });
+
+      var key = go.toLowerCase().trim();
+      var targetUrl = redirectMap[key];
+      if (targetUrl) {
+        window.location.replace(targetUrl);
+      }
+    })();
+  </script>
+  <meta name="description" content="HRCouriers — вакансии курьеров: Яндекс Еда, Купер, Самокат, Ozon." />
+  <meta name="referrer" content="no-referrer" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; frame-src 'none'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none';" />
+  <title>HRCouriers — Вакансии для курьеров</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <script>
+    (function () {
+      var storedTheme = null;
+      try {
+        storedTheme = localStorage.getItem("hrcouriers-theme");
+      } catch (e) {
+        storedTheme = null;
+      }
+      if (storedTheme === "light") {
+        document.body.classList.add("light-theme");
+      }
+    })();
+  </script>
+  <header class="header">
+    <div class="container header__inner">
+      <div class="header__brand">
+        <a class="logo" href="#" aria-label="HRCouriers — на главную">
+          <span class="logo__mark">HR</span>
+          <span class="logo__text">Couriers</span>
+        </a>
+        <button
+          type="button"
+          class="theme-toggle"
+          id="theme-toggle"
+          aria-label="Включить светлую тему"
+          aria-pressed="false"
+          title="Переключить тему"
+        >
+          <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="4"></circle>
+              <path d="M12 2v2"></path>
+              <path d="M12 20v2"></path>
+              <path d="m4.93 4.93 1.41 1.41"></path>
+              <path d="m17.66 17.66 1.41 1.41"></path>
+              <path d="M2 12h2"></path>
+              <path d="M20 12h2"></path>
+              <path d="m6.34 17.66-1.41 1.41"></path>
+              <path d="m19.07 4.93-1.41 1.41"></path>
+            </svg>
+          </span>
+          <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3a6 6 0 1 0 9 9 8.5 8.5 0 1 1-9-9z"></path>
+            </svg>
+          </span>
+        </button>
+      </div>
+      <div class="country-switcher">
+        <label class="country-switcher__label" for="country-select">Страна:</label>
+        <select class="country-switcher__select" id="country-select" name="country" aria-label="Выберите страну">
+          <option value="RU" selected>RU (Россия)</option>
+          <option value="KZ">KZ (Казахстан)</option>
+          <option value="BY">BY (Беларусь)</option>
+          <option value="UZ">UZ (Узбекистан)</option>
+        </select>
+      </div>
+      <nav class="nav" aria-label="Основная навигация">
+        <a class="nav__link" href="#workflow-stages">Этапы работы</a>
+        <a class="nav__link" href="#how-it-works">Как это работает</a>
+        <a class="nav__link" href="#vacancies">Вакансии</a>
+        <a class="nav__link nav__link--support" href="#footer-contact">Помощь</a>
+        <a class="nav__link nav__link--cta" href="#vacancies">Подбор</a>
+      </nav>
+      <button type="button" class="nav-toggle" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="hero" class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content reveal">
+          <p class="hero__badge">Кадровый сервис для курьеров</p>
+          <h1 class="hero__title">Стабильный доход и понятные условия</h1>
+          <p class="hero__lead">
+            Оформление на проверенные площадки в пару кликов: переходите по партнёрской ссылке и начинайте принимать заказы.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#vacancies">Выбрать вакансию</a>
+            <a class="btn btn--ghost" href="#vacancies">Смотреть вакансии</a>
+          </div>
+          <ul class="hero__stats" aria-label="Преимущества сервиса">
+            <li><strong>24/7</strong><span>поддержка на сайте</span></li>
+            <li><strong>8+</strong><span>площадок-партнёров</span></li>
+            <li><strong>HR</strong><span>персональный контакт</span></li>
+          </ul>
+        </div>
+        <div class="hero__panel reveal" aria-hidden="true">
+          <div class="hero__card"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust-strip" aria-label="Доверие">
+      <div class="container trust-strip__inner reveal">
+        <p class="trust-strip__text">Официальный партнёр крупнейших сетей доставки в РФ</p>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="section how">
+      <div class="container">
+        <header class="section__head section__head--center reveal">
+          <h2 class="section__title">Как это работает</h2>
+          <p class="section__subtitle">Три шага до первых выплат — без лишней бюрократии на нашей стороне.</p>
+        </header>
+        <ol class="how__steps">
+          <li class="how__step reveal">
+            <div class="how__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 8h16v4H12V8zm0 8h10v4H12v-4zm0 8h16v4H12v-4z" fill="currentColor" opacity=".35"/><path d="M8 6v28h24V6H8zm2 2h20v24H10V8z" stroke="currentColor" stroke-width="2"/></svg>
+            </div>
+            <h3 class="how__step-title">Выбираешь вакансию</h3>
+            <p class="how__step-text">Смотри сетку партнёров и условия — всё кратко на карточке.</p>
+          </li>
+          <li class="how__step reveal">
+            <div class="how__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 12h10v10H18z" stroke="currentColor" stroke-width="2"/><path d="m14 20 10 10 8-8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M10 28h20v4H10v-4z" fill="currentColor" opacity=".35"/></svg>
+            </div>
+            <h3 class="how__step-title">Переходишь по ссылке</h3>
+            <p class="how__step-text">Попадаешь на официальную регистрацию выбранной площадки.</p>
+          </li>
+          <li class="how__step reveal">
+            <div class="how__icon" aria-hidden="true">
+              <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20 8l3 7 8 1-6 5 2 8-7-4-7 4 2-8-6-5 8-1 3-7z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="20" cy="22" r="3" fill="currentColor" opacity=".4"/></svg>
+            </div>
+            <h3 class="how__step-title">Выходишь на смену и получаешь бонус</h3>
+            <p class="how__step-text">Начинаешь доставлять заказы — бонусы и акции зависят от партнёра.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section id="vacancies" class="section vacancies">
+      <div class="container">
+        <header class="section__head reveal">
+          <h2 class="section__title">Вакансии</h2>
+          <p class="section__subtitle">
+            Еженедельные выплаты и работа рядом с домом — у большинства партнёров. Выберите бренд и перейдите на официальную регистрацию.
+          </p>
+        </header>
+        <div class="cards cards--wide vacancies__grid">
+          <article class="card vacancy-card card--yandex reveal" data-country="RU">
+            <div class="vacancy-card__top">
+              <span class="vacancy-card__logo" aria-hidden="true">ЯЕ</span>
+              <h3 class="vacancy-card__title">Яндекс Еда RU</h3>
+            </div>
+            <p class="vacancy-card__income">до 175 000 ₽ / мес</p>
+            <ul class="vacancy-card__tags" aria-label="Преимущества вакансии">
+              <li>Еженедельно</li>
+              <li>Рядом с домом</li>
+              <li>Без опыта</li>
+              <li>Свободный график</li>
+            </ul>
+            <a class="btn vacancy-card__cta" href="?go=yandex_ru">Быстрый старт</a>
+          </article>
+
+          <article class="card vacancy-card card--kuper reveal" data-country="RU">
+            <div class="vacancy-card__top">
+              <span class="vacancy-card__logo" aria-hidden="true">КП</span>
+              <h3 class="vacancy-card__title">Купер</h3>
+            </div>
+            <p class="vacancy-card__income">до 160 000 ₽ / мес</p>
+            <ul class="vacancy-card__tags" aria-label="Преимущества вакансии">
+              <li>Еженедельно</li>
+              <li>Рядом с домом</li>
+              <li>Без опыта</li>
+              <li>Свободный график</li>
+            </ul>
+            <a class="btn vacancy-card__cta" href="?go=kuper">Быстрый старт</a>
+          </article>
+
+          <article class="card vacancy-card card--samokat reveal" data-country="RU">
+            <div class="vacancy-card__top">
+              <span class="vacancy-card__logo" aria-hidden="true">СК</span>
+              <h3 class="vacancy-card__title">Самокат</h3>
+            </div>
+            <p class="vacancy-card__income">до 170 000 ₽ / мес</p>
+            <ul class="vacancy-card__tags" aria-label="Преимущества вакансии">
+              <li>Еженедельно</li>
+              <li>Рядом с домом</li>
+              <li>Без опыта</li>
+              <li>Свободный график</li>
+            </ul>
+            <a class="btn vacancy-card__cta" href="?go=samokat">Быстрый старт</a>
+          </article>
+
+          <article class="card vacancy-card card--ozon reveal" data-country="RU">
+            <div class="vacancy-card__top">
+              <span class="vacancy-card__logo" aria-hidden="true">OZ</span>
+              <h3 class="vacancy-card__title">Ozon</h3>
+            </div>
+            <p class="vacancy-card__income">до 180 000 ₽ / мес</p>
+            <ul class="vacancy-card__tags" aria-label="Преимущества вакансии">
+              <li>Еженедельно</li>
+              <li>Рядом с домом</li>
+              <li>Без опыта</li>
+              <li>Свободный график</li>
+            </ul>
+            <a class="btn vacancy-card__cta" href="?go=ozon">Быстрый старт</a>
+          </article>
+
+          <article class="card vacancy-card card--yandex reveal" data-country="KZ">
+            <div class="vacancy-card__top">
+              <span class="vacancy-card__logo" aria-hidden="true">ЯК</span>
+              <h3 class="vacancy-card__title">Яндекс Еда KZ</h3>
+            </div>
+            <p class="vacancy-card__income">до 850 000 ₸ / мес</p>
+            <ul class="vacancy-card__tags" aria-label="Преимущества вакансии">
+              <li>Еженедельно</li>
+              <li>Без опыта</li>
+              <li>Гибкий график</li>
+              <li>Горячий спрос</li>
+            </ul>
+            <a class="btn vacancy-card__cta" href="?go=yandex_kz">Быстрый старт</a>
+          </article>
+
+          <article class="card vacancy-card card--yandex reveal" data-country="BY">
+            <div class="vacancy-card__top">
+              <span class="vacancy-card__logo" aria-hidden="true">ЯБ</span>
+              <h3 class="vacancy-card__title">Яндекс Еда BY</h3>
+            </div>
+            <p class="vacancy-card__income">до 4 500 BYN / мес</p>
+            <ul class="vacancy-card__tags" aria-label="Преимущества вакансии">
+              <li>Еженедельно</li>
+              <li>Без опыта</li>
+              <li>Гибкий график</li>
+              <li>Быстрый старт</li>
+            </ul>
+            <a class="btn vacancy-card__cta" href="?go=yandex_by">Быстрый старт</a>
+          </article>
+
+          <article class="card vacancy-card card--yandex reveal" data-country="UZ">
+            <div class="vacancy-card__top">
+              <span class="vacancy-card__logo" aria-hidden="true">ЯУ</span>
+              <h3 class="vacancy-card__title">Яндекс Еда UZ</h3>
+            </div>
+            <p class="vacancy-card__income">до 12 000 000 so'm / мес</p>
+            <ul class="vacancy-card__tags" aria-label="Преимущества вакансии">
+              <li>Еженедельно</li>
+              <li>Без опыта</li>
+              <li>Гибкий график</li>
+              <li>Бонусы за смены</li>
+            </ul>
+            <a class="btn vacancy-card__cta" href="?go=yandex_uz">Быстрый старт</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="workflow-stages" class="section workflow">
+      <div class="container">
+        <header class="section__head section__head--center reveal">
+          <h2 class="section__title">Этапы работы</h2>
+          <p class="section__subtitle">Прозрачный путь от выбора вакансии до первой смены.</p>
+        </header>
+        <ol class="workflow__steps">
+          <li class="workflow__step reveal">
+            <span class="workflow__num" aria-hidden="true">1</span>
+            <div class="workflow__body">
+              <h3 class="workflow__title">Выберите вакансию</h3>
+              <p class="workflow__text">Нажмите «Узнать больше» у нужного бренда.</p>
+            </div>
+          </li>
+          <li class="workflow__arrow reveal" aria-hidden="true">→</li>
+          <li class="workflow__step reveal">
+            <span class="workflow__num" aria-hidden="true">2</span>
+            <div class="workflow__body">
+              <h3 class="workflow__title">Заполните анкету на сайте партнера</h3>
+              <p class="workflow__text">Ответьте на вопросы в официальной форме регистрации.</p>
+            </div>
+          </li>
+          <li class="workflow__arrow reveal" aria-hidden="true">→</li>
+          <li class="workflow__step reveal">
+            <span class="workflow__num" aria-hidden="true">3</span>
+            <div class="workflow__body">
+              <h3 class="workflow__title">Выйдите на первую смену</h3>
+              <p class="workflow__text">Получите инструкции и начинайте принимать заказы.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer footer--mega">
+    <div class="container footer__mega-inner reveal">
+      <div class="footer__brand">
+        <span class="logo logo--footer"><span class="logo__mark">HR</span><span class="logo__text">Couriers</span></span>
+        <p class="footer__lead">
+          Подбор вакансий курьера на проверенные площадки. Информация носит справочный характер — условия уточняйте у партнёра при регистрации.
+        </p>
+        <a class="btn btn--footer-cta" href="mailto:hrcouriers@support.local" id="footer-support">Написать в поддержку</a>
+      </div>
+      <div class="footer__cols">
+        <div class="footer__col">
+          <h3 class="footer__heading">Навигация</h3>
+          <ul class="footer__list">
+            <li><a href="#hero">Главная</a></li>
+            <li><a href="#workflow-stages">Этапы работы</a></li>
+            <li><a href="#how-it-works">Как это работает</a></li>
+            <li><a href="#vacancies">Вакансии</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h3 class="footer__heading">Правовая информация</h3>
+          <ul class="footer__list">
+            <li><a href="privacy.html">Политика конфиденциальности</a></li>
+            <li><a href="terms.html">Пользовательское соглашение</a></li>
+            <li><a href="legal-info.html">Правовая информация 152-ФЗ</a></li>
+          </ul>
+        </div>
+        <div class="footer__col" id="footer-contact">
+          <h3 class="footer__heading">Контакты</h3>
+          <ul class="footer__list">
+            <li><a href="mailto:hrcouriers@support.local">hrcouriers@support.local</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container footer__bar">
+      <p class="footer__copyright">© HRCouriers. Все права защищены.</p>
+      <p class="footer__note">Материалы сайта не являются публичной офертой.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

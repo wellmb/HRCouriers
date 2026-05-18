@@ -40,9 +40,12 @@
   initThemeToggle();
 
   function initCountryFilter() {
-    var selector = document.getElementById("country-select");
+    var switcher = document.getElementById("country-switcher");
+    var trigger = document.getElementById("country-trigger");
+    var valueNode = document.getElementById("country-value");
+    var options = switcher ? switcher.querySelectorAll(".country-switcher__option") : [];
     var cards = document.querySelectorAll(".vacancy-card[data-country]");
-    if (!selector || !cards.length) return;
+    if (!switcher || !trigger || !valueNode || !options.length || !cards.length) return;
 
     function applyFilter(countryCode) {
       var selected = (countryCode || "RU").toUpperCase();
@@ -56,10 +59,58 @@
       });
     }
 
-    applyFilter(selector.value);
+    function closeDropdown() {
+      switcher.classList.remove("active");
+      trigger.setAttribute("aria-expanded", "false");
+    }
 
-    selector.addEventListener("change", function () {
-      applyFilter(selector.value);
+    function openDropdown() {
+      switcher.classList.add("active");
+      trigger.setAttribute("aria-expanded", "true");
+    }
+
+    function setActiveCountry(countryCode, title) {
+      var selected = (countryCode || "RU").toUpperCase();
+      valueNode.textContent = title;
+      options.forEach(function (option) {
+        var isActive = (option.getAttribute("data-country") || "").toUpperCase() === selected;
+        option.classList.toggle("is-active", isActive);
+        option.setAttribute("aria-selected", isActive ? "true" : "false");
+      });
+      applyFilter(selected);
+    }
+
+    var initialOption = switcher.querySelector(".country-switcher__option.is-active") || options[0];
+    setActiveCountry(
+      initialOption.getAttribute("data-country"),
+      initialOption.textContent.trim()
+    );
+
+    trigger.addEventListener("click", function () {
+      if (switcher.classList.contains("active")) {
+        closeDropdown();
+      } else {
+        openDropdown();
+      }
+    });
+
+    options.forEach(function (option) {
+      option.addEventListener("click", function () {
+        setActiveCountry(option.getAttribute("data-country"), option.textContent.trim());
+        closeDropdown();
+      });
+    });
+
+    document.addEventListener("click", function (event) {
+      if (!switcher.contains(event.target)) {
+        closeDropdown();
+      }
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        closeDropdown();
+      }
     });
   }
 

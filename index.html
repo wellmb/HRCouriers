@@ -85,14 +85,45 @@
           </span>
         </button>
       </div>
-      <div class="country-switcher">
-        <label class="country-switcher__label" for="country-select">Страна:</label>
-        <select class="country-switcher__select" id="country-select" name="country" aria-label="Выберите страну">
-          <option value="RU" selected>RU (Россия)</option>
-          <option value="KZ">KZ (Казахстан)</option>
-          <option value="BY">BY (Беларусь)</option>
-          <option value="UZ">UZ (Узбекистан)</option>
-        </select>
+      <div class="country-switcher" id="country-switcher">
+        <span class="country-switcher__label" id="country-label">Страна:</span>
+        <button
+          type="button"
+          class="country-switcher__trigger"
+          id="country-trigger"
+          aria-haspopup="listbox"
+          aria-expanded="false"
+          aria-labelledby="country-label country-value"
+        >
+          <span class="country-switcher__value" id="country-value">RU (Россия)</span>
+          <span class="country-switcher__chevron" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m6 9 6 6 6-6"></path>
+            </svg>
+          </span>
+        </button>
+        <ul class="country-switcher__menu" id="country-menu" role="listbox" aria-label="Выберите страну">
+          <li>
+            <button type="button" class="country-switcher__option is-active" data-country="RU" role="option" aria-selected="true">
+              RU (Россия)
+            </button>
+          </li>
+          <li>
+            <button type="button" class="country-switcher__option" data-country="KZ" role="option" aria-selected="false">
+              KZ (Казахстан)
+            </button>
+          </li>
+          <li>
+            <button type="button" class="country-switcher__option" data-country="BY" role="option" aria-selected="false">
+              BY (Беларусь)
+            </button>
+          </li>
+          <li>
+            <button type="button" class="country-switcher__option" data-country="UZ" role="option" aria-selected="false">
+              UZ (Узбекистан)
+            </button>
+          </li>
+        </ul>
       </div>
       <nav class="nav" aria-label="Основная навигация">
         <a class="nav__link" href="#workflow-stages">Этапы работы</a>
@@ -329,7 +360,7 @@
         <p class="footer__lead">
           Подбор вакансий курьера на проверенные площадки. Информация носит справочный характер — условия уточняйте у партнёра при регистрации.
         </p>
-        <a class="btn btn--footer-cta" href="mailto:hrcouriers@support.local" id="footer-support">Написать в поддержку</a>
+        <a class="btn btn--footer-cta" href="https://t.me/we11support" id="footer-support">Написать в поддержку</a>
       </div>
       <div class="footer__cols">
         <div class="footer__col">
@@ -352,7 +383,7 @@
         <div class="footer__col" id="footer-contact">
           <h3 class="footer__heading">Контакты</h3>
           <ul class="footer__list">
-            <li><a href="mailto:hrcouriers@support.local">hrcouriers@support.local</a></li>
+            <li><a href="https://t.me/we11support">Telegram Support</a></li>
           </ul>
         </div>
       </div>

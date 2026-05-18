@@ -104,6 +104,11 @@ body.light-theme {
   background-color: rgba(37, 99, 235, 0.15) !important;
 }
 
+body.light-theme .btn--ghost,
+body.light-theme .btn--ghost:hover {
+  color: #111827 !important;
+}
+
 .hero__badge,
 .trust-strip__text,
 .vacancy-card__tags li {
@@ -240,10 +245,13 @@ button {
 
 .country-switcher {
   margin-left: auto;
-  display: inline-flex;
+  position: relative;
+  display: inline-grid;
+  grid-template-columns: auto auto;
   align-items: center;
-  gap: 0.45rem;
+  column-gap: 0.45rem;
   flex-shrink: 0;
+  z-index: 120;
 }
 
 .country-switcher__label {
@@ -252,38 +260,140 @@ button {
   color: var(--muted);
 }
 
-.country-switcher__select {
+.country-switcher__trigger {
   min-height: 44px;
   border-radius: 12px;
-  border: 1px solid var(--primary);
-  background-color: rgba(37, 99, 235, 0.12);
-  color: #ffffff;
+  border: 1px solid var(--border);
+  background-color: #111827;
+  color: #e5e7eb;
   font-weight: 700;
   font-size: 0.86rem;
   line-height: 1;
-  padding: 0 2rem 0 0.75rem;
+  padding: 0 0.75rem 0 0.8rem;
   min-width: 148px;
-  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
   cursor: pointer;
   box-shadow: var(--shadow-soft);
-  background-image:
-    linear-gradient(45deg, transparent 50%, #93c5fd 50%),
-    linear-gradient(135deg, #93c5fd 50%, transparent 50%);
-  background-position:
-    calc(100% - 16px) calc(50% - 2px),
-    calc(100% - 11px) calc(50% - 2px);
-  background-size: 5px 5px, 5px 5px;
-  background-repeat: no-repeat;
+  transition:
+    border-color var(--transition),
+    background-color var(--transition),
+    transform var(--transition);
 }
 
-.country-switcher__select:focus {
+.country-switcher__trigger:hover {
+  border-color: #2563eb;
+}
+
+.country-switcher__trigger:focus {
   outline: 2px solid rgba(37, 99, 235, 0.45);
   outline-offset: 2px;
 }
 
-body.light-theme .country-switcher__select {
-  color: #1e3a8a;
-  background-color: rgba(37, 99, 235, 0.08);
+.country-switcher__value {
+  color: inherit;
+  white-space: nowrap;
+}
+
+.country-switcher__chevron {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #93c5fd;
+  transition: transform var(--transition);
+}
+
+.country-switcher.active .country-switcher__chevron {
+  transform: rotate(180deg);
+}
+
+.country-switcher__menu {
+  list-style: none;
+  margin: 0;
+  padding: 0.3rem;
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  min-width: 186px;
+  border-radius: 12px;
+  border: 1px solid #1f2937;
+  background: #111827;
+  box-shadow: 0 16px 32px rgba(2, 6, 23, 0.48);
+  z-index: 240;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition:
+    opacity 0.16s ease,
+    visibility 0.16s ease,
+    transform 0.16s ease;
+}
+
+.country-switcher.active .country-switcher__menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.country-switcher__option {
+  width: 100%;
+  min-height: 44px;
+  border: 0;
+  border-radius: 9px;
+  padding: 0.5rem 0.65rem;
+  text-align: left;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #dbeafe;
+  background: transparent;
+  cursor: pointer;
+}
+
+.country-switcher__option:hover {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.country-switcher__option.is-active {
+  background: rgba(37, 99, 235, 0.25);
+  color: #ffffff;
+}
+
+body.light-theme .country-switcher__label {
+  color: #334155;
+}
+
+body.light-theme .country-switcher__trigger {
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+  color: #0f172a;
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+}
+
+body.light-theme .country-switcher__trigger:hover {
+  border-color: #2563eb;
+  background-color: #f8fbff;
+}
+
+body.light-theme .country-switcher__chevron {
+  color: #2563eb;
+}
+
+body.light-theme .country-switcher__menu {
+  border-color: #dbe4f0;
+  background: #ffffff;
+  box-shadow: 0 18px 30px rgba(15, 23, 42, 0.15);
+}
+
+body.light-theme .country-switcher__option {
+  color: #1f2937;
+}
+
+body.light-theme .country-switcher__option.is-active {
+  background: #2563eb;
+  color: #ffffff;
 }
 
 .logo {
@@ -1173,11 +1283,20 @@ body.light-theme .theme-toggle__icon--moon {
     display: none;
   }
 
-  .country-switcher__select {
+  .country-switcher__trigger {
     min-height: 44px;
     min-width: 112px;
     font-size: 0.8rem;
-    padding-inline: 0.62rem 1.75rem;
+    padding-inline: 0.62rem 0.72rem;
+  }
+
+  .country-switcher__menu {
+    min-width: 152px;
+  }
+
+  .country-switcher__option {
+    min-height: 44px;
+    font-size: 0.8rem;
   }
 
   .nav-toggle {

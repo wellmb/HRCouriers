@@ -1,5 +1,5 @@
 /**
- * HRCouriers — reveal при скролле и мобильное меню.
+ * FastCourier — reveal при скролле и мобильное меню.
  */
 
 (function () {
@@ -9,7 +9,7 @@
     var toggleBtn = document.getElementById("theme-toggle");
     if (!toggleBtn) return;
 
-    var storageKey = "hrcouriers-theme";
+    var storageKey = "fastcourier-theme";
 
     function syncToggleState() {
       var isLight = document.body.classList.contains("light-theme");

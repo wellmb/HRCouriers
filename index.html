@@ -5,46 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
   <meta name="referrer" content="no-referrer" />
 
-  <!-- SEO: title, description, keywords -->
-  <title>HR Couriers — Работа курьером в Яндекс Еда, Самокат, Купер, Ozon</title>
-  <meta name="description" content="Ищете работу или подработку курьером? HR Couriers — проверенные вакансии с еженедельными выплатами рядом с домом. Быстрый старт в Яндекс, Самокат, Купер и Ozon." />
-  <meta name="keywords" content="работа курьером, подработка курьером, яндекс еда вакансии, самокат свежие вакансии, купер работа, озон курьер, курьер еженедельные выплаты" />
-  <link rel="canonical" href="https://hrcouriers.pro" />
+  <!-- SEO: Title, Description, Keywords -->
+  <title>FastCourier — Быстрое подключение курьеров: Яндекс Еда, Самокат, Купер, Ozon</title>
+  <meta name="description" content="FastCourier — работа и подработка курьером рядом с домом. Еженедельные выплаты, быстрый старт в Яндекс Еда, Самокат, Купер и Ozon без опыта." />
+  <meta name="keywords" content="работа курьером, подработка курьером, курьер на авто, курьер пешком, яндекс еда курьер, самокат курьер, купер курьер, ozon курьер, доставка еды работа, курьер еженедельные выплаты, быстрое подключение курьера" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://fastcourier.pro/" />
 
-  <!-- Open Graph: Telegram / VK previews -->
-  <meta property="og:title" content="HR Couriers — Работа и подработка курьером" />
-  <meta property="og:description" content="Оформление на проверенные площадки в пару кликов. Выбирай бренд и начинай зарабатывать рядом с домом." />
+  <!-- Open Graph: превью в Telegram, VK и соцсетях -->
+  <meta property="og:title" content="FastCourier — Быстрое подключение курьеров: Яндекс Еда, Самокат, Купер, Ozon" />
+  <meta property="og:description" content="Работа и подработка курьером рядом с домом. Еженедельные выплаты и быстрый старт на проверенных площадках." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://hrcouriers.pro" />
-  <!-- TODO: замените на URL финального og:image (например https://hrcouriers.pro/og-preview.jpg) -->
-  <meta property="og:image" content="https://hrcouriers.pro" />
+  <meta property="og:url" content="https://fastcourier.pro/" />
+  <meta property="og:image" content="https://fastcourier.pro/og-preview.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="ru_RU" />
+  <meta property="og:site_name" content="FastCourier" />
+
+  <!-- Яндекс.Вебмастер: после регистрации раскомментируйте и вставьте код верификации -->
+  <!-- <meta name="yandex-verification" content="ВАШ_КОД_ИЗ_ЯНДЕКС_ВЕБМАСТЕРА" /> -->
+
+  <!-- Google Search Console: после регистрации раскомментируйте и вставьте код верификации -->
+  <!-- <meta name="google-site-verification" content="ВАШ_КОД_ИЗ_GOOGLE_SEARCH_CONSOLE" /> -->
 
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' https://fonts.googleapis.com; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com; frame-src 'none'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none';" />
-
-  <!-- Early redirect: ?go= → партнёрская ссылка (до отрисовки страницы) -->
-  <script>
-    (function () {
-      var go = new URLSearchParams(window.location.search).get("go");
-      if (!go) return;
-
-      // TODO: подставьте финальные Workle / affiliate URL
-      var redirectMap = Object.freeze({
-        yandex_ru: "https://eda.yandex.ru/",
-        yandex_kz: "https://eda.yandex.kz/",
-        yandex_by: "https://eda.yandex.by/",
-        yandex_uz: "https://eda.yandex.uz/",
-        kuper: "https://kuper.ru/",
-        samokat: "https://samokat.ru/",
-        ozon: "https://www.ozon.ru/"
-      });
-
-      var key = go.toLowerCase().trim();
-      var targetUrl = redirectMap[key];
-      if (targetUrl) {
-        window.location.replace(targetUrl);
-      }
-    })();
-  </script>
 
   <link rel="icon" href="favicon/favicon.ico" sizes="48x48" />
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32.png" />
@@ -62,7 +47,7 @@
     (function () {
       var storedTheme = null;
       try {
-        storedTheme = localStorage.getItem("hrcouriers-theme");
+        storedTheme = localStorage.getItem("fastcourier-theme");
       } catch (e) {
         storedTheme = null;
       }
@@ -75,9 +60,9 @@
   <header class="header">
     <div class="container header__inner">
       <div class="header__brand">
-        <a class="logo" href="#hero" aria-label="HR Couriers — на главную">
-          <span class="logo__mark">HR</span>
-          <span class="logo__text">Couriers</span>
+        <a class="logo" href="#hero" aria-label="FastCourier — на главную">
+          <span class="logo__mark">Fast</span>
+          <span class="logo__text">Courier</span>
         </a>
         <button
           type="button"
@@ -169,7 +154,7 @@
     <section id="hero" class="hero">
       <div class="container hero__grid">
         <div class="hero__content reveal">
-          <p class="hero__badge">Кадровый сервис для курьеров</p>
+          <p class="hero__badge">Сервис FastCourier для курьеров</p>
           <h1>Стабильный доход и понятные условия</h1>
           <!-- TODO: финальный лид-текст -->
           <p class="hero__lead">
@@ -182,7 +167,7 @@
           <ul class="hero__stats" aria-label="Преимущества сервиса">
             <li><strong>24/7</strong><span>поддержка на сайте</span></li>
             <li><strong>8+</strong><span>площадок-партнёров</span></li>
-            <li><strong>HR</strong><span>персональный контакт</span></li>
+            <li><strong>Fast</strong><span>персональный контакт</span></li>
           </ul>
         </div>
         <div class="hero__panel reveal" aria-hidden="true">
@@ -252,12 +237,8 @@
               <li>Без опыта</li>
               <li>Свободный график</li>
             </ul>
-            <a
-              class="btn vacancy-card__cta"
-              href="?go=yandex_ru"
-              target="_blank"
-              rel="noopener noreferrer"
-            >Быстрый старт</a>
+            <!-- REF: вставьте реферальную ссылку Яндекс Еда RU -->
+            <a class="btn vacancy-card__cta" href="#" target="_blank" rel="noopener noreferrer">Быстрый старт</a>
           </article>
 
           <!-- Карточка: Купер -->
@@ -273,12 +254,8 @@
               <li>Без опыта</li>
               <li>Свободный график</li>
             </ul>
-            <a
-              class="btn vacancy-card__cta"
-              href="?go=kuper"
-              target="_blank"
-              rel="noopener noreferrer"
-            >Быстрый старт</a>
+            <!-- REF: вставьте реферальную ссылку Купер -->
+            <a class="btn vacancy-card__cta" href="#" target="_blank" rel="noopener noreferrer">Быстрый старт</a>
           </article>
 
           <!-- Карточка: Самокат -->
@@ -294,12 +271,8 @@
               <li>Без опыта</li>
               <li>Свободный график</li>
             </ul>
-            <a
-              class="btn vacancy-card__cta"
-              href="?go=samokat"
-              target="_blank"
-              rel="noopener noreferrer"
-            >Быстрый старт</a>
+            <!-- REF: вставьте реферальную ссылку Самокат -->
+            <a class="btn vacancy-card__cta" href="#" target="_blank" rel="noopener noreferrer">Быстрый старт</a>
           </article>
 
           <!-- Карточка: Ozon -->
@@ -315,12 +288,8 @@
               <li>Без опыта</li>
               <li>Свободный график</li>
             </ul>
-            <a
-              class="btn vacancy-card__cta"
-              href="?go=ozon"
-              target="_blank"
-              rel="noopener noreferrer"
-            >Быстрый старт</a>
+            <!-- REF: вставьте реферальную ссылку Ozon -->
+            <a class="btn vacancy-card__cta" href="#" target="_blank" rel="noopener noreferrer">Быстрый старт</a>
           </article>
 
           <!-- Карточка: Яндекс Еда KZ -->
@@ -336,12 +305,8 @@
               <li>Гибкий график</li>
               <li>Горячий спрос</li>
             </ul>
-            <a
-              class="btn vacancy-card__cta"
-              href="?go=yandex_kz"
-              target="_blank"
-              rel="noopener noreferrer"
-            >Быстрый старт</a>
+            <!-- REF: вставьте реферальную ссылку Яндекс Еда KZ -->
+            <a class="btn vacancy-card__cta" href="#" target="_blank" rel="noopener noreferrer">Быстрый старт</a>
           </article>
 
           <!-- Карточка: Яндекс Еда BY -->
@@ -357,12 +322,8 @@
               <li>Гибкий график</li>
               <li>Быстрый старт</li>
             </ul>
-            <a
-              class="btn vacancy-card__cta"
-              href="?go=yandex_by"
-              target="_blank"
-              rel="noopener noreferrer"
-            >Быстрый старт</a>
+            <!-- REF: вставьте реферальную ссылку Яндекс Еда BY -->
+            <a class="btn vacancy-card__cta" href="#" target="_blank" rel="noopener noreferrer">Быстрый старт</a>
           </article>
 
           <!-- Карточка: Яндекс Еда UZ -->
@@ -378,12 +339,8 @@
               <li>Гибкий график</li>
               <li>Бонусы за смены</li>
             </ul>
-            <a
-              class="btn vacancy-card__cta"
-              href="?go=yandex_uz"
-              target="_blank"
-              rel="noopener noreferrer"
-            >Быстрый старт</a>
+            <!-- REF: вставьте реферальную ссылку Яндекс Еда UZ -->
+            <a class="btn vacancy-card__cta" href="#" target="_blank" rel="noopener noreferrer">Быстрый старт</a>
           </article>
         </div>
       </div>
@@ -427,7 +384,7 @@
   <footer class="footer footer--mega">
     <div class="container footer__mega-inner reveal">
       <div class="footer__brand">
-        <span class="logo logo--footer"><span class="logo__mark">HR</span><span class="logo__text">Couriers</span></span>
+        <span class="logo logo--footer"><span class="logo__mark">Fast</span><span class="logo__text">Courier</span></span>
         <p class="footer__lead">
           Подбор вакансий курьера на проверенные площадки. Информация носит справочный характер — условия уточняйте у партнёра при регистрации.
         </p>
@@ -461,7 +418,7 @@
       </div>
     </div>
     <div class="container footer__bar">
-      <p class="footer__copyright">© HR Couriers. Все права защищены.</p>
+      <p class="footer__copyright">© FastCourier. Все права защищены.</p>
       <p class="footer__note">Материалы сайта не являются публичной офертой.</p>
     </div>
   </footer>

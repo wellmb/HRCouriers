@@ -39,7 +39,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/index.css" />
 </head>
 <body>
   <!-- Theme init: предотвращает FOUC -->
@@ -136,11 +136,9 @@
 
       <!-- Основная навигация -->
       <nav class="nav" aria-label="Основная навигация">
-        <a class="nav__link" href="#workflow-stages">Этапы работы</a>
         <a class="nav__link" href="#how-it-works">Как это работает</a>
         <a class="nav__link" href="#vacancies">Вакансии</a>
-        <a class="nav__link nav__link--support" href="#footer-contact">Помощь</a>
-        <a class="nav__link nav__link--cta" href="#vacancies">Подбор</a>
+        <a class="nav__link nav__link--cta" href="#footer-contact">Помощь</a>
       </nav>
 
       <button type="button" class="nav-toggle" aria-label="Открыть меню" aria-expanded="false">
@@ -167,12 +165,6 @@
           <li><strong>8+</strong><span>площадок</span></li>
           <li><strong>Fast</strong><span>персональный контакт</span></li>
         </ul>
-      </div>
-    </section>
-
-    <section class="trust-strip" aria-label="Доверие">
-      <div class="container trust-strip__inner reveal">
-        <p class="trust-strip__text">Официальный партнёр крупнейших сетей доставки в РФ</p>
       </div>
     </section>
 
@@ -232,7 +224,7 @@
               <li>Свободный график</li>
             </ul>
             <!-- REF: вставьте реферальную ссылку Яндекс Еда RU -->
-            <a class="btn vacancy-card__cta" href="#" target="_blank" rel="noopener noreferrer">Быстрый старт</a>
+            <a class="btn vacancy-card__cta" href="https://ya.cc/t/Y-uzRa199WDM6D" target="_blank" rel="noopener noreferrer">Быстрый старт</a>
           </article>
 
           <!-- Карточка: Купер -->
@@ -339,40 +331,6 @@
         </div>
       </div>
     </section>
-
-    <section id="workflow-stages" class="section workflow">
-      <div class="container">
-        <header class="section__head section__head--center reveal">
-          <h2>Этапы работы</h2>
-          <p class="section__subtitle">Прозрачный путь от выбора вакансии до первой смены.</p>
-        </header>
-        <ol class="workflow__steps">
-          <li class="workflow__step reveal">
-            <span class="workflow__num" aria-hidden="true">1</span>
-            <div class="workflow__body">
-              <h3 class="workflow__title">Выберите вакансию</h3>
-              <p class="workflow__text">Нажмите «Быстрый старт» у нужного бренда.</p>
-            </div>
-          </li>
-          <li class="workflow__arrow reveal" aria-hidden="true">→</li>
-          <li class="workflow__step reveal">
-            <span class="workflow__num" aria-hidden="true">2</span>
-            <div class="workflow__body">
-              <h3 class="workflow__title">Заполните анкету на сайте партнёра</h3>
-              <p class="workflow__text">Ответьте на вопросы в официальной форме регистрации.</p>
-            </div>
-          </li>
-          <li class="workflow__arrow reveal" aria-hidden="true">→</li>
-          <li class="workflow__step reveal">
-            <span class="workflow__num" aria-hidden="true">3</span>
-            <div class="workflow__body">
-              <h3 class="workflow__title">Выйдите на первую смену</h3>
-              <p class="workflow__text">Получите инструкции и начинайте принимать заказы.</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </section>
   </main>
 
   <footer class="footer footer--mega">
@@ -396,7 +354,7 @@
           </ul>
         </div>
         <div class="footer__col">
-          <h2>Правовая информация</h2>
+          <h2 class="footer__heading">Правовая информация</h2>
           <ul class="footer__list">
             <li><a href="privacy.html">Политика конфиденциальности</a></li>
             <li><a href="terms.html">Пользовательское соглашение</a></li>

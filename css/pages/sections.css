@@ -1,0 +1,40 @@
+/* Общие секции */
+.section {
+  padding: clamp(2.5rem, 6vw, 4rem) 0;
+}
+
+.section__head {
+  margin-bottom: 2rem;
+  max-width: 42rem;
+}
+
+.section__title {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.35rem, 4.2vw, 2rem);
+  letter-spacing: -0.02em;
+}
+
+.section__subtitle {
+  margin: 0;
+  color: var(--muted);
+}
+
+.section__head--center {
+  text-align: center;
+  margin-inline: auto;
+  max-width: 40rem;
+}
+
+.section__head--center .section__subtitle {
+  margin-inline: auto;
+}
+
+@media (max-width: 480px) {
+  .section {
+    padding: clamp(1.75rem, 6vw, 2.25rem) 0;
+  }
+
+  .section__title {
+    font-size: clamp(1.18rem, 5.8vw, 1.5rem);
+  }
+}

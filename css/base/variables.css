@@ -1,0 +1,76 @@
+/* Базовые переменные: палитра FastCourier */
+:root {
+  --primary: #2563eb !important;
+  --primary-hover: #1d4ed8 !important;
+  --bg: #0b0f19;
+  --dot-color: rgba(37, 99, 235, 0.32);
+  --surface: #111827;
+  --surface-2: #162133;
+  --text: #e5e7eb;
+  --muted: #9ca3af;
+  --accent: #2563eb;
+  --accent-dark: #1d4ed8;
+  --accent-soft: rgba(37, 99, 235, 0.16);
+  --logo-blue: #60a5fa;
+  --border: #2a3648;
+  --shadow: 0 18px 45px rgba(3, 8, 20, 0.45);
+  --shadow-soft: 0 12px 26px rgba(3, 8, 20, 0.3);
+  --radius: 14px;
+  --radius-lg: 22px;
+  --font: "Manrope", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --income-green: #60a5fa;
+  --header-bg: rgba(11, 18, 32, 0.88);
+  --vacancies-bg-end: #111b2d;
+  --workflow-bg-end: #102034;
+  --footer-bg: #060c16;
+  --footer-bg-alt: #040812;
+  --footer-text: rgba(229, 231, 235, 0.78);
+  --footer-heading: rgba(248, 250, 252, 0.96);
+  --footer-note: rgba(148, 163, 184, 0.82);
+  --footer-border: rgba(148, 163, 184, 0.2);
+  --tag-bg: #172338;
+  --tag-text: #dbe5f3;
+  --transition: 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.light-theme {
+  --primary: #2563eb !important;
+  --primary-hover: #1d4ed8 !important;
+  --bg: #f8fafc;
+  --dot-color: rgba(37, 99, 235, 0.4);
+  --surface: #ffffff;
+  --surface-2: #f3f4f6;
+  --text: #1f2937;
+  --muted: #4b5563;
+  --accent: #2563eb;
+  --accent-dark: #1d4ed8;
+  --accent-soft: rgba(37, 99, 235, 0.14);
+  --logo-blue: #60a5fa;
+  --border: #e5e7eb;
+  --shadow: 0 18px 45px rgba(17, 24, 39, 0.1);
+  --shadow-soft: 0 10px 22px rgba(17, 24, 39, 0.08);
+  --income-green: #60a5fa;
+  --header-bg: rgba(248, 250, 252, 0.9);
+  --vacancies-bg-end: #eef4ff;
+  --workflow-bg-end: #edf3ff;
+  --footer-bg: #ffffff;
+  --footer-bg-alt: #f3f4f6;
+  --footer-text: #374151;
+  --footer-heading: #111827;
+  --footer-note: #6b7280;
+  --footer-border: #e5e7eb;
+  --tag-bg: rgba(37, 99, 235, 0.12);
+  --tag-text: #1d4ed8;
+}
+
+/* Forced blue branding overrides */
+:root,
+body.light-theme {
+  --accent: #2563eb !important;
+  --accent-dark: #1d4ed8 !important;
+  --accent-soft: rgba(37, 99, 235, 0.15) !important;
+  --logo-blue: #60a5fa !important;
+  --income-green: #60a5fa !important;
+  --tag-bg: rgba(37, 99, 235, 0.15) !important;
+  --tag-text: #60a5fa !important;
+}

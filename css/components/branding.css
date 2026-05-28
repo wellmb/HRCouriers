@@ -1,0 +1,46 @@
+.btn--primary,
+.btn--footer-cta,
+.vacancy-card__cta,
+.nav__link--cta {
+  background-color: #2563eb !important;
+  background-image: none !important;
+  color: #ffffff !important;
+  border-color: #2563eb !important;
+}
+
+.btn--primary:hover,
+.btn--footer-cta:hover,
+.vacancy-card__cta:hover,
+.nav__link--cta:hover {
+  background-color: #1d4ed8 !important;
+  background-image: none !important;
+  color: #ffffff !important;
+}
+
+.btn--ghost {
+  border: 2px solid #2563eb !important;
+  color: #ffffff !important;
+  background-color: transparent !important;
+}
+
+.btn--ghost:hover {
+  border: 2px solid #2563eb !important;
+  color: #ffffff !important;
+  background-color: rgba(37, 99, 235, 0.15) !important;
+}
+
+body.light-theme .btn--ghost,
+body.light-theme .btn--ghost:hover {
+  color: #111827 !important;
+}
+
+.hero__badge,
+.trust-strip__text,
+.vacancy-card__tags li {
+  background-color: rgba(37, 99, 235, 0.15) !important;
+  color: #60a5fa !important;
+}
+
+.vacancy-card__income {
+  color: #60a5fa !important;
+}

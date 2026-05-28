@@ -1,0 +1,120 @@
+/* Футер */
+.footer {
+  padding: 2rem 0;
+  background: var(--footer-bg);
+  color: var(--footer-text);
+}
+
+.footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer__note {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.footer--mega {
+  padding: 0;
+  background: var(--footer-bg-alt);
+  color: var(--footer-text);
+}
+
+.footer__mega-inner {
+  display: grid;
+  gap: clamp(2rem, 5vw, 3rem);
+  padding: clamp(2.75rem, 7vw, 4.5rem) 0 clamp(2rem, 5vw, 3rem);
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.6fr);
+  align-items: start;
+}
+
+.footer__brand .logo {
+  margin-bottom: 1rem;
+}
+
+.footer__lead {
+  margin: 0 0 0.5rem;
+  max-width: 28rem;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  color: var(--footer-text);
+}
+
+.footer__cols {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+}
+
+.footer__heading {
+  margin: 0 0 1rem;
+  font-size: 0.88rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--footer-heading);
+}
+
+.footer__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footer__list a {
+  color: var(--footer-text);
+  font-weight: 600;
+  font-size: 0.92rem;
+  transition: color var(--transition);
+}
+
+.footer__list a:hover {
+  color: var(--footer-heading);
+}
+
+.footer__bar {
+  border-top: 1px solid var(--footer-border);
+  padding: 1.35rem 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer__copyright {
+  margin: 0;
+  font-weight: 800;
+  font-size: 1rem;
+  color: var(--footer-heading);
+}
+
+.footer .footer__bar .footer__note {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--footer-note);
+}
+
+.footer .footer__bar .footer__note a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.footer__bar--compact {
+  border-top: none;
+  padding-top: 1rem;
+}
+
+@media (max-width: 900px) {
+  .footer__mega-inner {
+    grid-template-columns: 1fr;
+  }
+}

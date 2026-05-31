@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /$
+Allow: /kz/
+Allow: /by/
+Allow: /uz/
+Allow: /css/
+Allow: /js/
+Disallow: /privacy.html
+Disallow: /terms.html
+Disallow: /legal-info.html
+
+Sitemap: https://fastcourier.pro/sitemap.xml

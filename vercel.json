@@ -2,6 +2,43 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/go/yandex-ru",
+      "destination": "https://ya.cc/t/Y-uzRa199WDM6D",
+      "permanent": false
+    },
+    {
+      "source": "/go/kuper",
+      "destination": "https://advt.pro/product/ProductId~01J2GSK81XB4WS6YC2P5DZFYDP!ExecutorId~01KRQW85TZF0GFCFV05BQDWCSF!UserId~01KRQW85CMHA0EGSTTVVAZHKZ3!LegacyUserId~6119833?erid=2SDnjc197ce",
+      "permanent": false
+    },
+    {
+      "source": "/go/samokat",
+      "destination": "https://advt.pro/product/ProductId~01HM6EGR30ZE687GB4FX2BN65B!ExecutorId~01KRQW85TZF0GFCFV05BQDWCSF!UserId~01KRQW85CMHA0EGSTTVVAZHKZ3!LegacyUserId~6119833?erid=2SDnjbsjWgr",
+      "permanent": false
+    },
+    {
+      "source": "/go/fastriver",
+      "destination": "https://advt.pro/product/ProductId~01KJSZ3PYHS0CVCAFJ66K9NEKB!ExecutorId~01KRQW85TZF0GFCFV05BQDWCSF!UserId~01KRQW85CMHA0EGSTTVVAZHKZ3!LegacyUserId~6119833?w_source=wiget&w_campaign=insurance&w_placement=button&w_date=20250520&step=2",
+      "permanent": false
+    },
+    {
+      "source": "/go/yandex-kz",
+      "destination": "https://advt.pro/product/ProductId~01J3QRTEBS4R92DY6NAR6Y2GFZ!ExecutorId~01KRQW85TZF0GFCFV05BQDWCSF!UserId~01KRQW85CMHA0EGSTTVVAZHKZ3!LegacyUserId~6119833?erid=2SDnje3jTCN",
+      "permanent": false
+    },
+    {
+      "source": "/go/yandex-by",
+      "destination": "https://advt.pro/product/ProductId~01JP512XMVSKDN4EVF85B86SS6!ExecutorId~01KRQW85TZF0GFCFV05BQDWCSF!UserId~01KRQW85CMHA0EGSTTVVAZHKZ3!LegacyUserId~6119833?erid=2SDnjcsY2EW",
+      "permanent": false
+    },
+    {
+      "source": "/go/yandex-uz",
+      "destination": "https://advt.pro/product/ProductId~01HM6FH6D8DRX6HYWWGSR3HZQE!ExecutorId~01KRQW85TZF0GFCFV05BQDWCSF!UserId~01KRQW85CMHA0EGSTTVVAZHKZ3!LegacyUserId~6119833?erid=2SDnjc2cmR4",
+      "permanent": false
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",

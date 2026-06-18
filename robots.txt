@@ -3,6 +3,11 @@ Allow: /$
 Allow: /kz/
 Allow: /by/
 Allow: /uz/
+Allow: /moskva/
+Allow: /spb/
+Allow: /ekb/
+Allow: /nsk/
+Allow: /kzn/
 Allow: /css/
 Allow: /js/
 Disallow: /privacy.html

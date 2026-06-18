@@ -1,6 +1,13 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
+  "rewrites": [
+    { "source": "/moskva", "destination": "/moskva/index.html" },
+    { "source": "/spb", "destination": "/spb/index.html" },
+    { "source": "/ekb", "destination": "/ekb/index.html" },
+    { "source": "/nsk", "destination": "/nsk/index.html" },
+    { "source": "/kzn", "destination": "/kzn/index.html" }
+  ],
   "redirects": [
     {
       "source": "/go/yandex-ru",
